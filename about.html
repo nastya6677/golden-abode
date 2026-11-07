@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас — Золотая обитель</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header__container">
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Золотая обитель" class="logo__img">
+            <div>
+                <span class="logo__title">Золотая обитель</span>
+                <span class="logo__subtitle">Товары буддийской культуры и этнические сувениры</span>
+            </div>
+        </a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link">Главная</a></li>
+                <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                <li><a href="about.html" class="nav__link active">О нас</a></li>
+                <li><a href="delivery.html" class="nav__link">Доставка</a></li>
+                <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header__actions">
+            <button class="action-btn" aria-label="Поиск" data-search-open>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.35-4.35"/>
+                </svg>
+            </button>
+            <a href="profile.html" class="action-btn" aria-label="Профиль" id="profileBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                </svg>
+            </a>
+            <a href="cart.html" class="action-btn" aria-label="Корзина">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+                    <path d="M3 6h18"/>
+                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="cart-badge">0</span>
+            </a>
+            <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<section class="hero" style="min-height: 380px;">
+    <div class="hero__bg-img"><img src="img/hero-bg.jpg" alt="Буддийский храм"></div>
+    <div class="container">
+        <div class="hero__content" style="padding: 60px 0;">
+            <h1 class="hero__title" style="font-size: 52px;">О нас</h1>
+            <p class="hero__text">Сохраняя традиции, дарим вдохновение</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="about-block">
+            <div>
+                <span class="section__label">Наша миссия</span>
+                <h2 class="section__title" style="margin-bottom: 24px;">Мы создаём пространство, где древняя мудрость встречается с современностью</h2>
+                <p style="font-size: 15px; line-height: 1.7; color: var(--text-light); margin-bottom: 30px;">Наша цель — сохранять традиции, популяризировать духовное наследие и делать его доступным для каждого.</p>
+                <div class="about-features">
+                    <div class="about-feature"><div class="about-feature__icon">✓</div><p class="about-feature__text">Более 10 лет на рынке</p></div>
+                    <div class="about-feature"><div class="about-feature__icon">✓</div><p class="about-feature__text">Только качественные товары</p></div>
+                    <div class="about-feature"><div class="about-feature__icon">✓</div><p class="about-feature__text">С заботой о каждом клиенте</p></div>
+                </div>
+            </div>
+            <div class="about-block__img" style="aspect-ratio: 1/1;"><img src="img/about-pagoda.jpg" alt="Пагода"></div>
+        </div>
+    </div>
+</section>
+
+        <!-- НАШИ ЦЕННОСТИ -->
+        <section class="section section--beige">
+            <div class="container">
+                <div class="section__header">
+                    <div>
+                        <span class="section__label">Наши ценности</span>
+                        <h2 class="section__title">Наши ценности</h2>
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;">
+                    <div style="background: white; padding: 30px; border-radius: var(--radius);">
+                        <img src="img/icon-traditions.png" alt="Традиции" style="width: 40px; height: 40px; object-fit: contain; margin-bottom: 15px; display: block;">
+                        <h3 style="font-family: var(--font-accent); font-size: 20px; margin-bottom: 12px;">Традиции</h3>
+                        <p style="color: var(--text-light); font-size: 14px;">Мы бережно храним культурное наследие буддизма и калмыцкого народа.</p>
+                    </div>
+                    <div style="background: white; padding: 30px; border-radius: var(--radius);">
+                        <img src="img/icon-quality.png" alt="Качество" style="width: 40px; height: 40px; object-fit: contain; margin-bottom: 15px; display: block;">
+                        <h3 style="font-family: var(--font-accent); font-size: 20px; margin-bottom: 12px;">Качество</h3>
+                        <p style="color: var(--text-light); font-size: 14px;">В каждом изделии — ручная работа, натуральные материалы и внимание к деталям.</p>
+                    </div>
+                    <div style="background: white; padding: 30px; border-radius: var(--radius);">
+                        <img src="img/icon-development.png" alt="Развитие" style="width: 40px; height: 40px; object-fit: contain; margin-bottom: 15px; display: block;">
+                        <h3 style="font-family: var(--font-accent); font-size: 20px; margin-bottom: 12px;">Развитие</h3>
+                        <p style="color: var(--text-light); font-size: 14px;">Мы поддерживаем мастеров и развиваем культуру для будущих поколений.</p>
+                    </div>
+                    <div style="background: white; padding: 30px; border-radius: var(--radius);">
+                        <img src="img/icon-care.png" alt="Забота" style="width: 40px; height: 40px; object-fit: contain; margin-bottom: 15px; display: block;">
+                        <h3 style="font-family: var(--font-accent); font-size: 20px; margin-bottom: 12px;">Забота</h3>
+                        <p style="color: var(--text-light); font-size: 14px;">Мы ценим каждого клиента и стремимся сделать ваш путь к гармонии проще.</p>
+                    </div>
+                </div>
+                
+                <!-- Блок с цитатой и фотографией -->
+                <div class="quote" style="margin-top: 50px;">
+                    <img src="img/quote.jpg" alt="Буддийская мудрость" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; flex-shrink: 0;">
+                    <p class="quote__text" style="font-size: 20px;">«Буддийская мудрость — это не только учение, но и образ жизни. Мы верим, что каждый человек может найти в себе источник спокойствия и силы.»</p>
+                </div>
+
+            </div>
+        </section> <!-- ЗДЕСЬ ЗАКРЫВАЕТСЯ СЕКЦИЯ ЦЕННОСТЕЙ -->
+
+        <!-- ОТЗЫВЫ (ВЫНЕСЕНЫ ОТДЕЛЬНО) -->
+        <section class="section" id="reviews-section" style="padding: 60px 0;">
+            <div class="container">
+                <span class="section__label">Отзывы</span>
+                <h2 class="section__title" style="margin-bottom: 30px;">Что о нас говорят</h2>
+                <div id="reviewsList" style="margin-bottom: 50px;"></div>
+
+                <div style="background:var(--beige); padding:30px; border-radius:16px; max-width:600px; margin:0 auto;">
+                    <h3 style="font-family:var(--font-accent); font-size:24px; margin-bottom:8px;">Оставить отзыв</h3>
+                    <p style="color:var(--text-light); margin-bottom:20px; font-size:14px;">Поделитесь впечатлениями о покупке</p>
+                    <form id="reviewForm">
+                        <div class="form-group">
+                            <label>Ваше имя *</label>
+                            <input type="text" name="name" class="form-control" placeholder="Иван" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Оценка *</label>
+                            <select name="rating" class="form-control" required>
+                                <option value="5">★★★★★ Отлично</option>
+                                <option value="4">★★★★ Хорошо</option>
+                                <option value="3">★★★ Нормально</option>
+                                <option value="2">★★ Плохо</option>
+                                <option value="1">★ Ужасно</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Отзыв *</label>
+                            <textarea name="text" class="form-control" placeholder="Ваш отзыв..." required></textarea>
+                        </div>
+                        <button type="submit" style="width:100%;padding:14px;background:var(--gold);color:white;border-radius:30px;font-weight:600;border:none;cursor:pointer;">Отправить отзыв</button>
+                    </form>
+                </div>
+            </div>
+        </section> <!-- ЗДЕСЬ ЗАКРЫВАЕТСЯ СЕКЦИЯ ОТЗЫВОВ -->
+
+    </main> <!-- ЗДЕСЬ ЗАКРЫВАЕТСЯ ОСНОВНОЙ КОНТЕНТ -->
+
+    <!-- CTA БАННЕР (ОН ТЕПЕРЬ ВНЕ MAIN, НИЧЕГО НЕ СЪЕДЕТ) -->
+    <section class="cta">
+        <img src="img/lotus.png" alt="Лотос" class="cta__lotus">
+        <div class="container cta__container">
+            <h2 class="cta__title">Подарите себе или близким частичку буддийской мудрости</h2>
+            <a href="catalog.html" class="cta__btn">Перейти в каталог →</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__brand">
+                <span class="logo__title">Золотая обитель</span>
+                <span class="logo__subtitle">Товары буддийской культуры и этнические сувениры</span>
+                <img src="img/logo.png" alt="Золотая обитель" class="footer__logo">
+            </div>
+            <div>
+                <h4 class="footer__title">Навигация</h4>
+                <ul class="footer__list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="delivery.html">Доставка</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer__contacts">
+                <h4 class="footer__title">Контакты</h4>
+                <p>📍 Республика Калмыкия, г. Элиста</p>
+                <p>📞 <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                <p>✉ <a href="mailto:info@golden-abode.ru">info@golden-abode.ru</a></p>
+            </div>
+            <div>
+                <h4 class="footer__title">Будьте в курсе новинок</h4>
+                <form class="subscribe">
+                    <input type="email" placeholder="Ваш e-mail" required>
+                    <button type="submit">→</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2026 Золотая обитель. Все права защищены.</p>
+            <p>Создано с любовью к культуре</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/database.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/form.js"></script>
+<script src="js/search.js"></script>
+<script src="js/content.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    function renderClientReviews() {
+        const list = document.getElementById('reviewsList');
+        if (!list) return;
+        const reviews = JSON.parse(localStorage.getItem('abode_reviews') || '[]');
+        if (reviews.length === 0) {
+            list.innerHTML = '<p style="color:var(--text-light);text-align:center;">Пока нет отзывов. Станьте первым!</p>';
+            return;
+        }
+        list.innerHTML = reviews.map(r => `
+            <div style="background:white;border:1px solid var(--border);padding:24px;border-radius:12px;margin-bottom:16px;">
+                <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+                    <strong>${r.name}</strong>
+                    <span style="color:var(--gold);font-size:16px;">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</span>
+                </div>
+                <p style="margin:12px 0;font-size:14px;">${r.text}</p>
+                ${r.reply ? `
+                    <div style="background:var(--beige);padding:12px 16px;border-radius:8px;border-left:3px solid var(--gold);margin-top:10px;">
+                        <p style="font-size:12px;color:var(--gold);font-weight:600;margin-bottom:4px;">Ответ магазина:</p>
+                        <p style="font-size:13px;">${r.reply}</p>
+                    </div>
+                ` : ''}
+                <p style="font-size:12px;color:var(--text-light);margin-top:10px;">${r.date}</p>
+            </div>
+        `).join('');
+    }
+
+    renderClientReviews();
+
+    const form = document.getElementById('reviewForm');
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const reviews = JSON.parse(localStorage.getItem('abode_reviews') || '[]');
+            reviews.unshift({
+                name: form.name.value.trim(),
+                rating: parseInt(form.rating.value),
+                text: form.text.value.trim(),
+                date: new Date().toLocaleString('ru-RU'),
+                reply: ''
+            });
+            localStorage.setItem('abode_reviews', JSON.stringify(reviews));
+            form.reset();
+            renderClientReviews();
+            if (typeof showToast === 'function') showToast('Спасибо за отзыв!');
+        });
+    }
+});
+</script>
+</body>
+</html>

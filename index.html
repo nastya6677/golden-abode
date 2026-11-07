@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Золотая обитель — Товары буддийской культуры</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header__container">
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Золотая обитель" class="logo__img">
+            <div>
+                <span class="logo__title">Золотая обитель</span>
+                <span class="logo__subtitle">Товары буддийской культуры и этнические сувениры</span>
+            </div>
+        </a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link active">Главная</a></li>
+                <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                <li><a href="about.html" class="nav__link">О нас</a></li>
+                <li><a href="delivery.html" class="nav__link">Доставка</a></li>
+                <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header__actions">
+            <button class="action-btn" aria-label="Поиск" data-search-open>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.35-4.35"/>
+                </svg>
+            </button>
+            <a href="profile.html" class="action-btn" aria-label="Профиль" id="profileBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                </svg>
+            </a>
+            <a href="cart.html" class="action-btn" aria-label="Корзина">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+                    <path d="M3 6h18"/>
+                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="cart-badge">0</span>
+            </a>
+            <!-- Ссылка на админку, если вы добавили её ранее -->
+            <a href="admin.html" class="action-btn" id="adminLink" aria-label="Админ-панель" style="display:none; color:var(--gold);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+            </a>
+            <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<section class="hero">
+    <div class="hero__bg-img"><img src="img/hero-bg.jpg" alt="Храм"></div>
+    <div class="container">
+        <div class="hero__content">
+            <span class="hero__subtitle">Республика Калмыкия</span>
+            <h1 class="hero__title">Духовные традиции и культура в каждом сувенире</h1>
+            <p class="hero__text">Интернет-магазин «Золотая обитель» — это уникальные товары буддийской культуры и этнические сувениры из Республики Калмыкия</p>
+            <a href="catalog.html" class="hero__cta">Перейти в каталог →</a>
+        </div>
+    </div>
+    <div class="hero__dots">
+        <div class="hero__dot active"></div>
+        <div class="hero__dot"></div>
+        <div class="hero__dot"></div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section__header">
+            <div>
+                <span class="section__label">Категории</span>
+                <h2 class="section__title">Популярные разделы</h2>
+            </div>
+        </div>
+        <div class="categories">
+            <a href="catalog.html" class="category"><div class="category__img"><img src="img/cat-statue.png" alt="Статуэтки"></div><p class="category__title">Статуэтки и ритуальные предметы</p></a>
+            <a href="catalog.html" class="category"><div class="category__img"><img src="img/cat-bowl.png" alt="Поющие чаши"></div><p class="category__title">Поющие чаши и аксессуары</p></a>
+            <a href="catalog.html" class="category"><div class="category__img"><img src="img/cat-beads.png" alt="Четки"></div><p class="category__title">Буддийские четки (мала)</p></a>
+            <a href="catalog.html" class="category"><div class="category__img"><img src="img/cat-thanka.png" alt="Тханки"></div><p class="category__title">Тханки и картины</p></a>
+            <a href="catalog.html" class="category"><div class="category__img"><img src="img/cat-textile.png" alt="Текстиль"></div><p class="category__title">Текстиль и одежда</p></a>
+            <a href="catalog.html" class="category"><div class="category__img"><img src="img/cat-souvenir.png" alt="Сувениры"></div><p class="category__title">Этнические сувениры Калмыкии</p></a>
+        </div>
+    </div>
+</section>
+
+<section class="section section--beige">
+    <div class="container">
+        <div class="section__header">
+            <div>
+                <span class="section__label">Хиты продаж</span>
+                <h2 class="section__title">Избранные товары</h2>
+            </div>
+            <a href="catalog.html" class="section__link">Смотреть все →</a>
+        </div>
+        <div class="slider-wrap">
+            <button class="slider-arrow slider-arrow--prev" aria-label="Назад"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg></button>
+            <button class="slider-arrow slider-arrow--next" aria-label="Вперед"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></button>
+            <div class="products">
+
+                <a href="product.html?id=1" class="product" data-product-id="1">
+                    <div class="product__badges"><span class="product__badge product__badge--hit">Хит</span></div>
+                    <div class="product__img"><img src="img/prod-buddha.jpg" alt="Статуэтка Будды"></div>
+                    <h3 class="product__title">Статуэтка Будды Шакьямуни (бронза, 12 см)</h3>
+                    <div class="product__price">4 990 ₽</div>
+                    <button class="product__cart" aria-label="В корзину"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button>
+                </a>
+
+                <a href="product.html?id=2" class="product" data-product-id="2">
+                    <div class="product__badges"><span class="product__badge product__badge--new">Новинка</span></div>
+                    <div class="product__img"><img src="img/prod-bowl.jpg" alt="Поющая чаша"></div>
+                    <h3 class="product__title">Поющая чаша ручной работы (18 см)</h3>
+                    <div class="product__price">7 490 ₽</div>
+                    <button class="product__cart" aria-label="В корзину"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button>
+                </a>
+
+                <a href="product.html?id=3" class="product" data-product-id="3">
+                    <div class="product__badges"><span class="product__badge product__badge--hit">Хит</span></div>
+                    <div class="product__img"><img src="img/prod-beads.jpg" alt="Четки"></div>
+                    <h3 class="product__title">Буддийские четки (мала) из сандала</h3>
+                    <div class="product__price">2 490 ₽</div>
+                    <button class="product__cart" aria-label="В корзину"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button>
+                </a>
+
+                <a href="product.html?id=4" class="product" data-product-id="4">
+                    <div class="product__img"><img src="img/prod-thanka.jpg" alt="Тханка"></div>
+                    <h3 class="product__title">Тханка «Белая Тара» (ручная работа)</h3>
+                    <div class="product__price">12 900 ₽</div>
+                    <button class="product__cart" aria-label="В корзину"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button>
+                </a>
+
+                <a href="product.html?id=5" class="product" data-product-id="5">
+                    <div class="product__img"><img src="img/prod-souvenir.jpg" alt="Сувенир"></div>
+                    <h3 class="product__title">Этнический сувенир (калмыцкий оберег)</h3>
+                    <div class="product__price">1 290 ₽</div>
+                    <button class="product__cart" aria-label="В корзину"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></button>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- СЕКЦИЯ О НАС (ИСПРАВЛЕНА) -->
+<section class="section">
+    <div class="container">
+        <div class="about-block">
+            <div class="about-block__img"><img src="img/about-elista.png" alt="Элиста"></div>
+            <div class="about-block__content">
+                <span class="section__label">О нас</span>
+                <h2 class="about-block__title">Калмыкия — земля,<br><em>где встречаются Восток и степь</em></h2>
+                <p class="about-block__text">Мы собрали для вас лучшие товары, отражающие духовные наследие буддизма и самобытную культуру Республики Калмыкия. В «Золотой обители» вы найдете не только сувениры, но и частичку великой традиции, которая вдохновляет и помогает найти гармонию.</p>
+                
+                <!-- БЛОК С ИКОНКАМИ -->
+                <div class="about-features">
+                    <div class="about-feature">
+                        <div class="about-feature__icon"><img src="img/icon-lotus.png" alt="Лотос"></div>
+                        <p class="about-feature__text">Аутентичные товары</p>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature__icon"><img src="img/icon-check.png" alt="Качество"></div>
+                        <p class="about-feature__text">Проверенное качество</p>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature__icon"><img src="img/icon-hands.png" alt="Мастера"></div>
+                        <p class="about-feature__text">Поддержка местных мастеров</p>
+                    </div>
+                    <div class="about-feature">
+                        <div class="about-feature__icon"><img src="img/icon-heart.png" alt="Забота"></div>
+                        <p class="about-feature__text">С заботой о культуре</p>
+                    </div>
+                </div>
+
+                <div class="quote">
+    <!-- 📸 ФОТО ЦИТАТЫ -->
+    <img src="img/quote.jpg" alt="Буддийская мудрость" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; flex-shrink: 0; background-color: #eee; border: 2px solid var(--gold);" onerror="this.style.display='none'">
+    
+    <p class="quote__text">«Буддизм — это путь к доброте, осознанности и внутреннему покою»</p>
+</div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA БАННЕР (вынесен из блока О нас, как и должно быть) -->
+<section class="cta">
+    <img src="img/lotus.png" alt="Лотос" class="cta__lotus">
+    <div class="container cta__container">
+        <h2 class="cta__title">Подарите себе или близким частичку буддийской мудрости</h2>
+        <a href="catalog.html" class="cta__btn">Перейти в каталог →</a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__brand">
+                <span class="logo__title">Золотая обитель</span>
+                <span class="logo__subtitle">Товары буддийской культуры и этнические сувениры</span>
+                <img src="img/logo.png" alt="Золотая обитель" class="footer__logo">
+            </div>
+            <div>
+                <h4 class="footer__title">Навигация</h4>
+                <ul class="footer__list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="delivery.html">Доставка</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer__title">Мы в соцсетях</h4>
+                <div class="socials">
+                    <a href="https://vk.com" target="_blank" rel="noopener" class="social" aria-label="VK"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.785 16.241s.288-.032.436-.192c.137-.148.132-.427.132-.427s-.02-1.303.585-1.496c.595-.191 1.36 1.271 2.17 1.835.614.427 1.08.334 1.08.334l2.171-.03s1.135-.07.596-.961c-.044-.073-.312-.658-1.61-1.861-1.359-1.259-1.176-1.055.46-3.234.996-1.328 1.395-2.14 1.27-2.487-.118-.33-.848-.243-.848-.243l-2.444.015s-.18-.025-.314.055c-.13.079-.214.263-.214.263s-.388 1.03-.905 1.906c-1.088 1.848-1.523 1.945-1.701 1.83-.415-.267-.311-1.075-.311-1.65 0-1.79.271-2.537-.531-2.73-.267-.064-.464-.107-1.148-.114-.877-.01-1.62.003-2.04.208-.28.137-.496.441-.365.459.163.021.531.099.727.364.253.342.244 1.11.244 1.11s.145 2.107-.338 2.369c-.331.179-.785-.187-1.76-1.865-.5-.866-.878-1.823-.878-1.823s-.073-.18-.203-.276c-.158-.117-.38-.154-.38-.154l-2.322.015s-.35.01-.478.162c-.114.135-.009.414-.009.414s1.819 4.253 3.879 6.396c1.887 1.965 4.03 1.835 4.03 1.835h.971z"/></svg></a>
+                    <a href="https://t.me" target="_blank" rel="noopener" class="social" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" class="social" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener" class="social" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                </div>
+            </div>
+            <div class="footer__contacts">
+                <h4 class="footer__title">Контакты</h4>
+                <p>📍 Республика Калмыкия, г. Элиста</p>
+                <p>📞 <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                <p>✉ <a href="mailto:info@golden-abode.ru">info@golden-abode.ru</a></p>
+            </div>
+            <div>
+                <h4 class="footer__title">Будьте в курсе новинок</h4>
+                <form class="subscribe">
+                    <input type="email" placeholder="Ваш e-mail" required>
+                    <button type="submit">→</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2026 Золотая обитель. Все права защищены.</p>
+            <p>Создано с любовью к культуре</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/database.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/form.js"></script>
+<script src="js/search.js"></script>
+<script src="js/content.js"></script>
+<script>
+// Скрываем товары, которые скрыл админ
+document.addEventListener('DOMContentLoaded', () => {
+    const hidden = JSON.parse(localStorage.getItem('abode_hidden_products') || '[]');
+    document.querySelectorAll('.product').forEach(p => {
+        const href = p.getAttribute('href') || '';
+        const match = href.match(/id=(\d+)/);
+        if (match && hidden.includes(parseInt(match[1]))) {
+            p.style.display = 'none';
+        }
+    });
+});
+</script>
+</body>
+</html>

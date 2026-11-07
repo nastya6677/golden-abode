@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доставка — Золотая обитель</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header__container">
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Золотая обитель" class="logo__img">
+            <div>
+                <span class="logo__title">Золотая обитель</span>
+                <span class="logo__subtitle">Товары буддийской культуры и этнические сувениры</span>
+            </div>
+        </a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link">Главная</a></li>
+                <li><a href="catalog.html" class="nav__link">Каталог</a></li>
+                <li><a href="about.html" class="nav__link">О нас</a></li>
+                <li><a href="delivery.html" class="nav__link active">Доставка</a></li>
+                <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header__actions">
+            <button class="action-btn" aria-label="Поиск" data-search-open>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.35-4.35"/>
+                </svg>
+            </button>
+            <a href="profile.html" class="action-btn" aria-label="Профиль" id="profileBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                </svg>
+            </a>
+            <a href="cart.html" class="action-btn" aria-label="Корзина">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/>
+                    <path d="M3 6h18"/>
+                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+                <span class="cart-badge">0</span>
+            </a>
+            <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<section class="hero" style="min-height: 380px;">
+    <div class="hero__bg-img"><img src="img/hero-bg.jpg" alt="Буддийский храм"></div>
+    <div class="container">
+        <div class="hero__content" style="padding: 60px 0;">
+            <h1 class="hero__title" style="font-size: 52px;">Доставка</h1>
+            <p class="hero__text">Быстро, надёжно, в любую точку России</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <span class="section__label">Способы доставки</span>
+        <h2 class="section__title" style="margin-bottom: 15px;">Способы доставки</h2>
+        <p style="color: var(--text-light); margin-bottom: 40px;">Мы заботимся о том, чтобы ваш заказ пришёл вовремя и в целостности.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 60px;">
+            <div style="border: 1px solid var(--border); padding: 30px; border-radius: var(--radius-lg);">
+                <div style="font-size: 32px; margin-bottom: 15px;">📦</div>
+                <h3 style="font-family: var(--font-accent); font-size: 20px; margin-bottom: 10px;">Почта России</h3>
+                <p style="color: var(--gold); font-weight: 700; margin-bottom: 12px;">от 350 ₽</p>
+                <p style="font-size: 13px; color: var(--text-light);">5-14 дней. Доставка по всей России. Отслеживается по номеру.</p>
+            </div>
+            <div style="border: 1px solid var(--border); padding: 30px; border-radius: var(--radius-lg);">
+                <div style="font-size: 32px; margin-bottom: 15px;">🚚</div>
+                <h3 style="font-family: var(--font-accent); font-size: 20px; margin-bottom: 10px;">СДЭК</h3>
+                <p style="color: var(--gold); font-weight: 700; margin-bottom: 12px;">от 450 ₽</p>
+                <p style="font-size: 13px; color: var(--text-light);">2-7 дней. Быстрая и надёжная доставка, пункты выдачи.</p>
+            </div>
+            <div style="border: 1px solid var(--border); padding: 30px; border-radius: var(--radius-lg);">
+                <div style="font-size: 32px; margin-bottom: 15px;">🏠</div>
+                <h3 style="font-family: var(--font-accent); font-size: 20px; margin-bottom: 10px;">Курьерская</h3>
+                <p style="color: var(--gold); font-weight: 700; margin-bottom: 12px;">от 500 ₽</p>
+                <p style="font-size: 13px; color: var(--text-light);">1-5 дней. Доставка до двери в крупных городах.</p>
+            </div>
+            <div style="border: 1px solid var(--border); padding: 30px; border-radius: var(--radius-lg);">
+                <div style="font-size: 32px; margin-bottom: 15px;">📍</div>
+                <h3 style="font-family: var(--font-accent); font-size: 20px; margin-bottom: 10px;">Самовывоз</h3>
+                <p style="color: var(--gold); font-weight: 700; margin-bottom: 12px;">Бесплатно</p>
+                <p style="font-size: 13px; color: var(--text-light);">г. Элиста, ул. Ленина, 12 (по предварительной договорённости)</p>
+            </div>
+        </div>
+
+        <h2 class="section__title" style="margin-bottom: 10px;">Как оформить заказ</h2>
+        <p style="color: var(--text-light); margin-bottom: 40px;">Все очень просто!</p>
+
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 60px;">
+            <div style="text-align: center;">
+                <div style="width: 50px; height: 50px; border: 2px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; color: var(--gold); margin: 0 auto 15px;">1</div>
+                <p style="font-size: 14px;">Выберите товары и добавьте в корзину</p>
+            </div>
+            <div style="text-align: center;">
+                <div style="width: 50px; height: 50px; border: 2px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; color: var(--gold); margin: 0 auto 15px;">2</div>
+                <p style="font-size: 14px;">Укажите данные для доставки</p>
+            </div>
+            <div style="text-align: center;">
+                <div style="width: 50px; height: 50px; border: 2px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; color: var(--gold); margin: 0 auto 15px;">3</div>
+                <p style="font-size: 14px;">Выберите способ оплаты</p>
+            </div>
+            <div style="text-align: center;">
+                <div style="width: 50px; height: 50px; border: 2px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; color: var(--gold); margin: 0 auto 15px;">4</div>
+                <p style="font-size: 14px;">Получите заказ и наслаждайтесь</p>
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+            <div style="border: 1px solid var(--gold); padding: 30px; border-radius: var(--radius-lg);">
+                <h3 style="font-family: var(--font-accent); font-size: 22px; margin-bottom: 15px;">Зоны доставки</h3>
+                <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;">Доставка по всей России, а также в страны СНГ. Точный срок и стоимость рассчитываются при оформлении заказа.</p>
+                <button type="button" class="return-btn" data-return-open>Условия возврата →</button>
+            </div>
+            <div style="border: 1px solid var(--gold); padding: 30px; border-radius: var(--radius-lg);">
+                <h3 style="font-family: var(--font-accent); font-size: 22px; margin-bottom: 15px;">Оплата и возврат</h3>
+                <p style="font-size: 14px; color: var(--text-light); margin-bottom: 20px;">Удобные способы оплаты: банковские карты, СБП, электронные кошельки. Возможность возврата в течение 14 дней.</p>
+                <button type="button" class="return-btn" data-return-open>Условия возврата →</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <img src="img/lotus.png" alt="Лотос" class="cta__lotus">
+    <div class="container cta__container">
+        <h2 class="cta__title">Подарите себе или близким частичку буддийской мудрости</h2>
+        <a href="catalog.html" class="cta__btn">Перейти в каталог →</a>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div class="footer__brand">
+                <span class="logo__title">Золотая обитель</span>
+                <span class="logo__subtitle">Товары буддийской культуры и этнические сувениры</span>
+                <img src="img/logo.png" alt="Золотая обитель" class="footer__logo">
+            </div>
+            <div>
+                <h4 class="footer__title">Навигация</h4>
+                <ul class="footer__list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="delivery.html">Доставка</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer__title">Мы в соцсетях</h4>
+                <div class="socials">
+                    <a href="https://vk.com" target="_blank" rel="noopener" class="social" aria-label="VK"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.785 16.241s.288-.032.436-.192c.137-.148.132-.427.132-.427s-.02-1.303.585-1.496c.595-.191 1.36 1.271 2.17 1.835.614.427 1.08.334 1.08.334l2.171-.03s1.135-.07.596-.961c-.044-.073-.312-.658-1.61-1.861-1.359-1.259-1.176-1.055.46-3.234.996-1.328 1.395-2.14 1.27-2.487-.118-.33-.848-.243-.848-.243l-2.444.015s-.18-.025-.314.055c-.13.079-.214.263-.214.263s-.388 1.03-.905 1.906c-1.088 1.848-1.523 1.945-1.701 1.83-.415-.267-.311-1.075-.311-1.65 0-1.79.271-2.537-.531-2.73-.267-.064-.464-.107-1.148-.114-.877-.01-1.62.003-2.04.208-.28.137-.496.441-.365.459.163.021.531.099.727.364.253.342.244 1.11.244 1.11s.145 2.107-.338 2.369c-.331.179-.785-.187-1.76-1.865-.5-.866-.878-1.823-.878-1.823s-.073-.18-.203-.276c-.158-.117-.38-.154-.38-.154l-2.322.015s-.35.01-.478.162c-.114.135-.009.414-.009.414s1.819 4.253 3.879 6.396c1.887 1.965 4.03 1.835 4.03 1.835h.971z"/></svg></a>
+                    <a href="https://t.me" target="_blank" rel="noopener" class="social" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" class="social" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener" class="social" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                </div>
+            </div>
+            <div class="footer__contacts">
+                <h4 class="footer__title">Контакты</h4>
+                <p>📍 Республика Калмыкия, г. Элиста</p>
+                <p>📞 <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                <p>✉ <a href="mailto:info@golden-abode.ru">info@golden-abode.ru</a></p>
+            </div>
+            <div>
+                <h4 class="footer__title">Будьте в курсе новинок</h4>
+                <form class="subscribe">
+                    <input type="email" placeholder="Ваш e-mail" required>
+                    <button type="submit">→</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2026 Золотая обитель. Все права защищены.</p>
+            <p>Создано с любовью к культуре</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/database.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/form.js"></script>
+<script src="js/search.js"></script>
+<script src="js/returns.js"></script>
+<script src="js/content.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+/* ================= ПЛАНШЕТЫ ================= */
+@media (max-width: 1024px) {
+    .container { padding: 0 20px; }
+    .hero__title { font-size: 42px; }
+    .hero { min-height: 520px; }
+    .section { padding: 60px 0; }
+    .section__title { font-size: 28px; }
+    .categories { grid-template-columns: repeat(3, 1fr); }
+    .products { grid-template-columns: repeat(3, 1fr); }
+    .footer__grid { grid-template-columns: 1fr 1fr 1fr; gap: 30px; }
+    .about-block { grid-template-columns: 1fr; gap: 40px; }
+    .cta__title { font-size: 26px; }
+}
+
+/* ================= МОБИЛЬНЫЕ ================= */
+@media (max-width: 768px) {
+    body { font-size: 13px; }
+    .container { padding: 0 16px; }
+    .header { padding: 12px 0; }
+    .header__container { flex-wrap: wrap; gap: 12px; }
+    .burger { display: flex; }
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background: var(--white);
+        padding: 80px 30px 30px;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+        transition: right 0.4s ease;
+        z-index: 999;
+        order: 3;
+    }
+    .nav.open { right: 0; }
+    .nav__list { flex-direction: column; gap: 20px; }
+    .nav__link { font-size: 16px; }
+    .logo__title { font-size: 18px; }
+    .logo__subtitle { font-size: 8px; max-width: 140px; }
+    .hero { min-height: 480px; }
+    .hero__content { padding: 60px 0; max-width: 100%; }
+    .hero__title { font-size: 30px; line-height: 1.2; }
+    .hero__text { font-size: 13px; }
+    .hero__subtitle { font-size: 11px; letter-spacing: 2px; }
+    .hero__cta { padding: 12px 26px; font-size: 13px; }
+    .hero__bg-img { width: 100%; opacity: 0.4; }
+    .section { padding: 40px 0; }
+    .section__title { font-size: 22px; }
+    .section__label { font-size: 10px; }
+    .section__header { margin-bottom: 25px; }
+    .categories { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .category__title { font-size: 12px; }
+    .products { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .product { padding: 12px; }
+    .product__title { font-size: 12px; }
+    .product__price { font-size: 14px; }
+    .product__cart { width: 32px; height: 32px; bottom: 12px; right: 12px; }
+    .product__cart svg { width: 15px; height: 15px; }
+    .slider-arrow { display: none; }
+    .about-block__title { font-size: 24px; }
+    .about-features { grid-template-columns: 1fr; gap: 14px; }
+    .quote { flex-direction: column; text-align: center; padding: 20px; }
+    .cta { padding: 40px 0; }
+    .cta__title { font-size: 20px; }
+    .cta__container { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .cta__btn { padding: 12px 24px; font-size: 13px; }
+    .cta__lotus { font-size: 60px; left: 10px; }
+    .footer { padding: 40px 0 20px; }
+    .footer__grid { grid-template-columns: 1fr; gap: 30px; text-align: left; }
+    .socials { justify-content: flex-start; }
+    .footer__bottom { flex-direction: column; text-align: center; gap: 8px; }
+    .toast { left: 16px; right: 16px; bottom: 16px; padding: 12px 16px; }
+
+    /* Каталог на мобильном */
+    .catalog-layout { grid-template-columns: 1fr; gap: 0; }
+    .catalog-sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background: var(--white);
+        padding: 30px;
+        box-shadow: 10px 0 30px rgba(0,0,0,0.1);
+        z-index: 999;
+        transition: left 0.4s ease;
+        overflow-y: auto;
+    }
+    .catalog-sidebar.open { left: 0; }
+    .filter-toggle {
+        display: inline-flex !important;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 20px;
+        background: var(--gold);
+        color: white;
+        border-radius: 30px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    /* Поиск на мобильном */
+    .search-modal__box {
+        top: 20px;
+        padding: 24px;
+        width: 95%;
+    }
+    .search-modal__title { font-size: 20px; }
+}
+
+/* ================= МАЛЕНЬКИЕ ЭКРАНЫ ================= */
+@media (max-width: 480px) {
+    .hero__title { font-size: 24px; }
+    .section__title { font-size: 20px; }
+    .products { grid-template-columns: 1fr; }
+    .categories { grid-template-columns: repeat(2, 1fr); }
+    .logo__subtitle { display: none; }
+}

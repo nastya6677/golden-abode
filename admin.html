@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель — Золотая обитель</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .admin-tabs { display: flex; gap: 10px; margin-bottom: 30px; border-bottom: 1px solid var(--border); padding-bottom: 10px; flex-wrap: wrap; }
+        .admin-tab { padding: 10px 20px; cursor: pointer; border-radius: 8px 8px 0 0; font-weight: 600; background: var(--beige); color: var(--text-light); transition: 0.3s; border: none; font-size: 14px; }
+        .admin-tab.active { background: var(--gold); color: white; }
+        .admin-content { display: none; }
+        .admin-content.active { display: block; }
+        .admin-card { background: white; border: 1px solid var(--border); padding: 20px; border-radius: 12px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .admin-card-info { flex: 1; min-width: 200px; }
+        .admin-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+        .btn-sm { padding: 8px 16px; border-radius: 30px; font-size: 13px; font-weight: 600; cursor: pointer; border: none; transition: 0.3s; }
+        .btn-gold { background: var(--gold); color: white; }
+        .btn-gold:hover { background: var(--gold-dark); }
+        .btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
+        .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+        .btn-danger { background: transparent; color: var(--burgundy); border: 1px solid var(--burgundy); }
+        .btn-danger:hover { background: var(--burgundy); color: white; }
+        .admin-form-group { margin-bottom: 15px; }
+        .admin-form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; }
+        .admin-form-control { width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; font-family: inherit; }
+        .admin-form-control:focus { outline: none; border-color: var(--gold); }
+        @media (max-width: 768px) {
+            .admin-tabs { flex-direction: column; }
+            .admin-tab { text-align: left; border-radius: 8px; }
+            .admin-card { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container header__container">
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Золотая обитель" class="logo__img">
+            <div>
+                <span class="logo__title">Золотая обитель</span>
+                <span class="logo__subtitle">Админ-панель</span>
+            </div>
+        </a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="index.html" class="nav__link">На сайт</a></li>
+                <li><a href="admin.html" class="nav__link active">Админка</a></li>
+            </ul>
+        </nav>
+        <div class="header__actions">
+            <button id="logoutAdmin" class="action-btn" style="color:var(--burgundy); display:flex; align-items:center; gap:5px; width:auto; font-weight:600;" aria-label="Выйти">Выйти ✕</button>
+        </div>
+    </div>
+</header>
+
+<main>
+<section class="section" id="adminPage" style="padding: 40px 0 80px;">
+    <div class="container">
+        <h1 style="font-family: var(--font-accent); font-size: 36px; margin-bottom: 8px;">Панель управления</h1>
+        <p id="adminWelcome" style="color:var(--text-light); margin-bottom: 30px;">Добро пожаловать!</p>
+
+        <div class="admin-tabs">
+            <button class="admin-tab active" data-tab="orders">Заказы</button>
+            <button class="admin-tab" data-tab="reviews">Отзывы</button>
+            <button class="admin-tab" data-tab="questions">Вопросы</button>
+            <button class="admin-tab" data-tab="products">Товары</button>
+            <button class="admin-tab" data-tab="users">Пользователи</button>
+            <button class="admin-tab" data-tab="content">Контент сайта</button>
+        </div>
+
+        <!-- Заказы -->
+        <div id="tab-orders" class="admin-content active">
+            <h2 style="font-family: var(--font-accent); font-size: 24px; margin-bottom: 20px;">Все заказы</h2>
+            <div id="adminOrders"></div>
+        </div>
+
+        <!-- Отзывы -->
+        <div id="tab-reviews" class="admin-content">
+            <h2 style="font-family: var(--font-accent); font-size: 24px; margin-bottom: 20px;">Отзывы клиентов</h2>
+            <div id="adminReviews"></div>
+        </div>
+
+        <!-- Вопросы -->
+        <div id="tab-questions" class="admin-content">
+            <h2 style="font-family: var(--font-accent); font-size: 24px; margin-bottom: 20px;">Вопросы с сайта</h2>
+            <div id="adminQuestions"></div>
+        </div>
+
+        <!-- Товары -->
+        <div id="tab-products" class="admin-content">
+            <div id="adminProducts"></div>
+        </div>
+
+        <!-- Пользователи (НОВОЕ) -->
+        <div id="tab-users" class="admin-content">
+            <h2 style="font-family: var(--font-accent); font-size: 24px; margin-bottom: 20px;">Зарегистрированные пользователи</h2>
+            <div id="adminUsers"></div>
+        </div>
+
+        <!-- Контент -->
+        <div id="tab-content" class="admin-content">
+            <h2 style="font-family: var(--font-accent); font-size: 24px; margin-bottom: 20px;">Редактор контента</h2>
+            <div id="adminContent"></div>
+        </div>
+    </div>
+</section>
+</main>
+
+<!-- МОДАЛЬНОЕ ОКНО ДОБАВЛЕНИЯ ТОВАРА -->
+<div class="admin-modal" id="productModal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.6); backdrop-filter:blur(4px); align-items:center; justify-content:center;">
+    <div style="background:white; border-radius:16px; padding:30px; width:90%; max-width:600px; max-height:90vh; overflow-y:auto; position:relative;">
+        <button onclick="closeProductModal()" style="position:absolute; top:15px; right:15px; background:var(--beige); border:none; width:30px; height:30px; border-radius:50%; cursor:pointer; font-size:16px;">✕</button>
+        <h2 style="font-family:var(--font-accent); font-size:28px; margin-bottom:20px;">Новый товар</h2>
+        
+        <form id="productForm">
+            <div class="form-group">
+                <label>Название товара *</label>
+                <input type="text" name="title" class="form-control" required placeholder="Например: Статуэтка Будды">
+            </div>
+            
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+                <div class="form-group">
+                    <label>Цена (₽) *</label>
+                    <input type="number" name="price" class="form-control" required placeholder="4990">
+                </div>
+                <div class="form-group">
+                    <label>Категория</label>
+                    <select name="category" class="form-control">
+                        <option value="statue">Статуэтки</option>
+                        <option value="attr">Атрибутика</option>
+                        <option value="beads">Четки</option>
+                        <option value="thanka">Ткани и картины</option>
+                        <option value="souvenir">Сувениры</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Краткое описание</label>
+                <textarea name="desc" class="form-control" style="min-height:80px;" placeholder="Описание товара..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Фото товара (загрузить с компьютера)</label>
+                <input type="file" id="productImageInput" accept="image/*" style="font-size:14px;">
+                <div style="margin-top:10px; font-size:12px; color:#999;">Или вставьте ссылку на картинку из интернета:</div>
+                <input type="text" name="imageUrl" class="form-control" placeholder="https://..." style="margin-top:5px;">
+            </div>
+
+            <div id="imagePreview" style="margin-bottom:15px; text-align:center; display:none;">
+                <img src="" alt="Превью" style="max-height:150px; border-radius:8px; border:1px solid var(--border);">
+            </div>
+
+            <button type="submit" style="width:100%; padding:14px; background:var(--gold); color:white; border-radius:30px; font-weight:600; border:none; cursor:pointer;">Добавить товар</button>
+        </form>
+    </div>
+</div>
+
+<!-- МОДАЛЬНОЕ ОКНО РЕДАКТИРОВАНИЯ ПОЛЬЗОВАТЕЛЯ -->
+<div id="userModal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.6); backdrop-filter:blur(4px); align-items:center; justify-content:center;">
+    <div style="background:white; border-radius:16px; padding:30px; width:90%; max-width:560px; max-height:90vh; overflow-y:auto; position:relative;">
+        <button type="button" onclick="closeUserModal()" style="position:absolute; top:15px; right:15px; background:var(--beige); border:none; width:30px; height:30px; border-radius:50%; cursor:pointer; font-size:16px;" aria-label="Закрыть">✕</button>
+        <h2 style="font-family:var(--font-accent); font-size:28px; margin-bottom:20px;">Редактирование профиля</h2>
+        <form id="userForm" novalidate>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+                <div class="form-group">
+                    <label>Имя *</label>
+                    <input type="text" name="firstName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label>Фамилия</label>
+                    <input type="text" name="lastName" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>E-mail *</label>
+                <input type="email" name="email" class="form-control" required>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+                <div class="form-group">
+                    <label>Телефон</label>
+                    <input type="tel" name="phone" class="form-control" placeholder="+7 (999) 123-45-67">
+                </div>
+                <div class="form-group">
+                    <label>Роль</label>
+                    <select name="role" class="form-control">
+                        <option value="USER">Клиент</option>
+                        <option value="ADMIN">Администратор</option>
+                    </select>
+                </div>
+            </div>
+            <div id="userRoleHint" style="display:none; font-size:12px; color:#999; margin:-8px 0 12px;">Свою роль изменить нельзя.</div>
+            <div class="form-group">
+                <label>Адрес доставки</label>
+                <input type="text" name="address" class="form-control" placeholder="г. Элиста, ул. Ленина, 12">
+            </div>
+            <div class="form-group">
+                <label>Новый пароль</label>
+                <input type="text" name="newPassword" class="form-control" minlength="6" autocomplete="off" placeholder="Оставьте пустым, чтобы не менять">
+            </div>
+            <div id="userFormError" style="color:var(--burgundy); font-size:13px; min-height:18px; margin-bottom:10px;"></div>
+            <button type="submit" style="width:100%; padding:14px; background:var(--gold); color:white; border-radius:30px; font-weight:600; border:none; cursor:pointer;">Сохранить</button>
+        </form>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__bottom">
+            <p>© 2026 Золотая обитель. Админ-панель.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/database.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/vendor/docx.iife.js"></script>
+<script src="js/reports.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/mailer.js"></script>
+<script src="js/admin-extras.js"></script>
+</body>
+</html>
